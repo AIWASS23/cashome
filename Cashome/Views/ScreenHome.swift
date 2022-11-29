@@ -11,7 +11,7 @@ class ScreenHome: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //linearGradientColorBackground()
+        // linearGradientColorBackground()
     }
 
     override func didMoveToWindow() {

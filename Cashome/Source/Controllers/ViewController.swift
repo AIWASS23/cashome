@@ -9,10 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var screen: ScreenHome?
+    var screen: HomeScreen?
 
     override func loadView() {
-        self.screen = ScreenHome()
+        self.screen = HomeScreen()
         self.view = self.screen
     }
 
