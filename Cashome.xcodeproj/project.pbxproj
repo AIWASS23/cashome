@@ -16,6 +16,8 @@
 		1482A7662930E2CE00ED283D /* CashomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7652930E2CE00ED283D /* CashomeTests.swift */; };
 		1482A7702930E2CE00ED283D /* CashomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A76F2930E2CE00ED283D /* CashomeUITests.swift */; };
 		1482A7722930E2CE00ED283D /* CashomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */; };
+		14ECB4E62936297200034B56 /* GradienteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4E52936297200034B56 /* GradienteColor.swift */; };
+		14ECB4EB29362BCE00034B56 /* ScreenHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EA29362BCE00034B56 /* ScreenHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1482A76B2930E2CE00ED283D /* CashomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482A76F2930E2CE00ED283D /* CashomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITests.swift; sourceTree = "<group>"; };
 		1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14ECB4E52936297200034B56 /* GradienteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradienteColor.swift; sourceTree = "<group>"; };
+		14ECB4EA29362BCE00034B56 /* ScreenHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				1482A74B2930E2CD00ED283D /* AppDelegate.swift */,
 				1482A74D2930E2CD00ED283D /* SceneDelegate.swift */,
 				1482A74F2930E2CD00ED283D /* ViewController.swift */,
+				14ECB4E729362B1800034B56 /* Views */,
+				14ECB4E52936297200034B56 /* GradienteColor.swift */,
 				1482A7572930E2CE00ED283D /* Assets.xcassets */,
 				1482A7592930E2CE00ED283D /* LaunchScreen.storyboard */,
 				1482A75C2930E2CE00ED283D /* Info.plist */,
@@ -125,6 +131,14 @@
 				1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */,
 			);
 			path = CashomeUITests;
+			sourceTree = "<group>";
+		};
+		14ECB4E729362B1800034B56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14ECB4EA29362BCE00034B56 /* ScreenHome.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +295,8 @@
 				1482A7562930E2CD00ED283D /* Cashome.xcdatamodeld in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
 				1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */,
+				14ECB4E62936297200034B56 /* GradienteColor.swift in Sources */,
+				14ECB4EB29362BCE00034B56 /* ScreenHome.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

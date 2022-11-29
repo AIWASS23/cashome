@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
+    var screen: ScreenHome?
+
+    override func loadView() {
+        self.screen = ScreenHome()
+        self.view = self.screen
     }
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
-
