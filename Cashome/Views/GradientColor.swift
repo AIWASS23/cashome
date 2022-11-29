@@ -13,7 +13,8 @@ extension UIView {
         let linearGradientColorLayer = CAGradientLayer()
 
         linearGradientColorLayer.colors = [
-            UIColor.init(red: (201-20)/255, green: (214-20)/255, blue: (234-20)/255, alpha: 1).cgColor,
+//            UIColor.init(red: (201-20)/255, green: (214-20)/255, blue: (234-20)/255, alpha: 1).cgColor,
+            UIColor(named: "GradientColor")?.cgColor as Any,
             UIColor.white.cgColor
         ]
 
