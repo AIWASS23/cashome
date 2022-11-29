@@ -99,13 +99,11 @@
 		1482A74A2930E2CD00ED283D /* Cashome */ = {
 			isa = PBXGroup;
 			children = (
-				1482A74B2930E2CD00ED283D /* AppDelegate.swift */,
-				1482A74D2930E2CD00ED283D /* SceneDelegate.swift */,
-				1482A74F2930E2CD00ED283D /* ViewController.swift */,
-				1482A7572930E2CE00ED283D /* Assets.xcassets */,
+				FFDBD42829362D0B00ABD308 /* Resource */,
+				FFDBD42129362C7800ABD308 /* Source */,
+				FFDBD42029362C5400ABD308 /* Application */,
 				1482A7592930E2CE00ED283D /* LaunchScreen.storyboard */,
 				1482A75C2930E2CE00ED283D /* Info.plist */,
-				1482A7542930E2CD00ED283D /* Cashome.xcdatamodeld */,
 			);
 			path = Cashome;
 			sourceTree = "<group>";
@@ -125,6 +123,88 @@
 				1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */,
 			);
 			path = CashomeUITests;
+			sourceTree = "<group>";
+		};
+		FFDBD42029362C5400ABD308 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1482A74B2930E2CD00ED283D /* AppDelegate.swift */,
+				1482A74D2930E2CD00ED283D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FFDBD42129362C7800ABD308 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBD42929362DDF00ABD308 /* Extensions */,
+				FFDBD42329362C8E00ABD308 /* Models */,
+				FFDBD42729362CC900ABD308 /* Views */,
+				FFDBD42629362CC100ABD308 /* ViewModels */,
+				FFDBD42529362CB200ABD308 /* Service */,
+				FFDBD42429362C9A00ABD308 /* Protocols */,
+				FFDBD42229362C8400ABD308 /* Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FFDBD42229362C8400ABD308 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1482A74F2930E2CD00ED283D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFDBD42329362C8E00ABD308 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFDBD42429362C9A00ABD308 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FFDBD42529362CB200ABD308 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FFDBD42629362CC100ABD308 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FFDBD42729362CC900ABD308 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFDBD42829362D0B00ABD308 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1482A7542930E2CD00ED283D /* Cashome.xcdatamodeld */,
+				1482A7572930E2CE00ED283D /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FFDBD42929362DDF00ABD308 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -477,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = NTS86MKTBV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
