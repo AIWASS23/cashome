@@ -41,7 +41,8 @@ class HomeScreen: UIView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
 
-            titleExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -110),
+            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
+//            titleExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -110),
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
             titleExpense.widthAnchor.constraint(equalToConstant: 150),
             titleExpense.heightAnchor.constraint(equalToConstant: 150)
