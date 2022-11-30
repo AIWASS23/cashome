@@ -18,6 +18,7 @@
 		1482A7722930E2CE00ED283D /* CashomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
+		FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD4322937931D00ABD308 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
+		FFDBD4322937931D00ABD308 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Cashome/Source/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				14ECB4ED29364B4800034B56 /* HomeScreen.swift */,
+				FFDBD4322937931D00ABD308 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */,
 				14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */,
 				1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */,
+				FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
