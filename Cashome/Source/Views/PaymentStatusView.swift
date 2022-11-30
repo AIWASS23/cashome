@@ -14,9 +14,6 @@ enum PaymentStatus: String {
 
 class PaymentStatusView: UIView {
 
-    var status: PaymentStatus = .pending
-    var delegate: StatusDelegate?
-
     let statusLabel: UILabel = {
         let label = UILabel()
         label.text = "Pendente"
@@ -27,13 +24,9 @@ class PaymentStatusView: UIView {
 
     lazy var statusIcon: UIImageView = {
         let iconConfiguration = UIImage.SymbolConfiguration(weight: .bold)
-        let icon = UIImage(systemName: self.status.rawValue, withConfiguration: iconConfiguration)
+        let icon = UIImage(systemName: "xmark", withConfiguration: iconConfiguration)
         let image = UIImageView(image: icon)
-        if self.status == .paid {
-            image.tintColor = UIColor(named: "PositiveColor")
-        } else {
-            image.tintColor = UIColor(named: "NegativeColor")
-        }
+        image.tintColor = UIColor(named: "NegativeColor")
         image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -43,7 +36,7 @@ class PaymentStatusView: UIView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillProportionally
-        stack.backgroundColor = UIColor(named: "GradientColor")
+        stack.backgroundColor = .clear
         stack.layer.cornerRadius = 10
         stack.layer.borderWidth = 1
         stack.layer.borderColor = UIColor(named: "BackgroundDark")?.cgColor
@@ -63,6 +56,18 @@ class PaymentStatusView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public func configureCell(status: PaymentStatus) {
+        let iconConfiguration = UIImage.SymbolConfiguration(weight: .bold)
+        statusIcon.image = UIImage(systemName: status.rawValue, withConfiguration: iconConfiguration)
+        if status == .pending {
+            self.statusLabel.text = "Pendente"
+            statusIcon.tintColor = UIColor(named: "NegativeColor")
+        } else {
+            self.statusLabel.text = "Pago"
+            statusIcon.tintColor = UIColor(named: "PositiveColor")
+        }
     }
 
     private func addSubviewInScreen() {
