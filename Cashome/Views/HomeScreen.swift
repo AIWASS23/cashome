@@ -9,20 +9,6 @@ import UIKit
 
 class HomeScreen: UIView {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     let titleExpense: UILabel = {
         let label = UILabel()
         label.text = "Despesas"
@@ -34,8 +20,6 @@ class HomeScreen: UIView {
 
         return label
     }()
-
-
 
     override init(frame: CGRect) {
         super.init(frame: frame)
