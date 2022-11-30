@@ -11,7 +11,6 @@ class HomeScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // linearGradientColorBackground()
     }
 
     override func didMoveToWindow() {
