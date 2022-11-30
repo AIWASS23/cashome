@@ -42,10 +42,11 @@ class HomeScreen: UIView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
 
-            addButtonExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 160),
+            addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
+//            addButtonExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 160),
             addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
-            addButtonExpense.widthAnchor.constraint(equalToConstant: 60),
-            addButtonExpense.heightAnchor.constraint(equalToConstant: 60)
+            addButtonExpense.widthAnchor.constraint(equalToConstant: 30),
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 30)
 
         ])
     }
