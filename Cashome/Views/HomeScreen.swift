@@ -19,11 +19,24 @@ class HomeScreen: UIView {
         /* fazer uma extension func para reaproveitamento de Codigo */
 
         return label
+    let addButtonExpense: UIButton = {
+
+        let button = UIButton()
+        var config = UIButton.Configuration.plain()
+        let size = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .medium)
+        config.baseForegroundColor = UIColor(named: "ActionColor")
+        config.image = UIImage(systemName: "plus.circle.fill", withConfiguration: size)
+        button.configuration = config
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(titleExpense)
+        self.addSubview(addButtonExpense)
         setupConstraints()
 
     }
@@ -46,7 +59,13 @@ class HomeScreen: UIView {
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
             titleExpense.widthAnchor.constraint(equalToConstant: 150),
             titleExpense.heightAnchor.constraint(equalToConstant: 150)
+            addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
+//            addButtonExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 160),
+            addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
+            addButtonExpense.widthAnchor.constraint(equalToConstant: 30),
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 30)
 
         ])
     }
+}
 }
