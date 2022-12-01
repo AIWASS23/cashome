@@ -9,6 +9,16 @@ import UIKit
 
 class HomeScreen: UIView {
 
+    let titleExpense: UILabel = {
+        let label = UILabel()
+        label.text = "Despesas"
+        label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
+        label.textColor = UIColor.black
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        /* fazer uma extension func para reaproveitamento de Codigo */
+
+        return label
     let addButtonExpense: UIButton = {
 
         let button = UIButton()
@@ -25,6 +35,7 @@ class HomeScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.addSubview(titleExpense)
         self.addSubview(addButtonExpense)
         setupConstraints()
 
@@ -33,6 +44,7 @@ class HomeScreen: UIView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         linearGradientColorBackground()
+
     }
 
     required init?(coder: NSCoder) {
@@ -42,6 +54,11 @@ class HomeScreen: UIView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
 
+            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
+//            titleExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -110),
+            titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
+            titleExpense.widthAnchor.constraint(equalToConstant: 150),
+            titleExpense.heightAnchor.constraint(equalToConstant: 150)
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
 //            addButtonExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 160),
             addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
@@ -50,4 +67,5 @@ class HomeScreen: UIView {
 
         ])
     }
+}
 }
