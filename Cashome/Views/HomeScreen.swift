@@ -12,18 +12,19 @@ class HomeScreen: UIView {
     let titleExpense: UILabel = {
         let label = UILabel()
         label.text = "Despesas"
-        label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
 
         /* fazer uma extension func para reaproveitamento de Codigo */
 
         return label
-    let addButtonExpense: UIButton = {
+    }()
 
+    let addButtonExpense: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
-        let size = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .medium)
+        let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .bold, scale: .medium)
         config.baseForegroundColor = UIColor(named: "ActionColor")
         config.image = UIImage(systemName: "plus.circle.fill", withConfiguration: size)
         button.configuration = config
@@ -53,19 +54,14 @@ class HomeScreen: UIView {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-
-            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
-//            titleExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -110),
+            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
-            titleExpense.widthAnchor.constraint(equalToConstant: 150),
-            titleExpense.heightAnchor.constraint(equalToConstant: 150)
-            addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
-//            addButtonExpense.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 160),
-            addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
-            addButtonExpense.widthAnchor.constraint(equalToConstant: 30),
-            addButtonExpense.heightAnchor.constraint(equalToConstant: 30)
+            titleExpense.heightAnchor.constraint(equalToConstant: 35),
 
+            addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            addButtonExpense.centerYAnchor.constraint(equalTo: titleExpense.centerYAnchor),
+            addButtonExpense.widthAnchor.constraint(equalToConstant: 35),
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 35)
         ])
     }
-}
 }
