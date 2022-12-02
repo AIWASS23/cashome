@@ -26,7 +26,7 @@ class HomeScreen: UIView {
         var config = UIButton.Configuration.plain()
         let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .bold, scale: .medium)
         config.baseForegroundColor = UIColor(named: "ActionColor")
-        config.image = UIImage(systemName: "plus.circle.fill", withConfiguration: size)
+        config.image = UIImage(systemName: "plus", withConfiguration: size)
         button.configuration = config
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -34,10 +34,22 @@ class HomeScreen: UIView {
 
     }()
 
+    var expensesTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = .clear
+        // registra célula
+        tableView.register(ExpensesTableViewCell.self,
+                           forCellReuseIdentifier: ExpensesTableViewCell.identifier)
+        tableView.layer.cornerRadius = 8
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(titleExpense)
         self.addSubview(addButtonExpense)
+        self.addSubview(expensesTableView)
         setupConstraints()
 
     }
@@ -61,7 +73,15 @@ class HomeScreen: UIView {
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             addButtonExpense.centerYAnchor.constraint(equalTo: titleExpense.centerYAnchor),
             addButtonExpense.widthAnchor.constraint(equalToConstant: 35),
-            addButtonExpense.heightAnchor.constraint(equalToConstant: 35)
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 35),
+
+            expensesTableView.topAnchor.constraint(equalTo: titleExpense.bottomAnchor, constant: 10),
+            expensesTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,
+                                                      constant: -10),
+            expensesTableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                                                       constant: 20),
+            expensesTableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+                                                        constant: -20)
         ])
     }
 }

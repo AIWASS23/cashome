@@ -78,8 +78,12 @@ class PaymentStatusView: UIView {
 
     private func setConstraints() {
         let containerConstraints = [
-            containerStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            containerStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            containerStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            containerStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                                        constant: 2),
+            containerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+                                                         constant: -2)
         ]
         NSLayoutConstraint.activate(containerConstraints)
     }
