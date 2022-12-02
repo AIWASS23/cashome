@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -14,9 +15,13 @@ class ViewController: UIViewController {
     override func loadView() {
         self.screen = HomeScreen()
         self.view = self.screen
+        screen?.onTapAddButton = {
+            let sheet = UIHostingController(rootView: Sheet())
+            self.present(sheet, animated: true)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+}
 }

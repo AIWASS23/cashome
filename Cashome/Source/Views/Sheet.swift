@@ -8,13 +8,45 @@
 import SwiftUI
 
 struct Sheet: View {
+    @State private var nome = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct Sheet_Previews: PreviewProvider {
-    static var previews: some View {
-        Sheet()
+        NavigationView {
+            VStack {
+                Form {
+                    Section {
+                        TextField("Nome",text : $nome)
+                    } header: {
+                        Text("Testando o nome")
+                    }
+                }
+            }
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
+                        Button {
+    //                        report.add(release: Release(title: title, type: selectedFlavor, value: value, date: buy))
+    //                        isPresented = false
+                        } label: {
+                            Text("Salvar")
+                                .font(.system(.body, design: .rounded).weight(.medium))
+                        }
+                        
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack {
+                        Button {
+    //                        isPresented = false
+                        } label: {
+                            Text("Cancelar")
+                                .font(.system(.body, design: .rounded).weight(.medium))
+                        }
+                        
+                    }
+                }
+            }
+            .navigationTitle("Adicionar Despesa")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
