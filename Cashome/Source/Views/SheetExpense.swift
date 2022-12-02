@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct Sheet: View {
+struct SheetExpense: View {
+    @Environment(\.dismiss) var dismiss
     @State private var nome = ""
     var body: some View {
         NavigationView {
@@ -20,28 +21,24 @@ struct Sheet: View {
                     }
                 }
             }
-            .toolbar{
+            .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
                         Button {
-    //                        report.add(release: Release(title: title, type: selectedFlavor, value: value, date: buy))
-    //                        isPresented = false
                         } label: {
                             Text("Salvar")
                                 .font(.system(.body, design: .rounded).weight(.medium))
                         }
-                        
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
                         Button {
-    //                        isPresented = false
+                            dismiss()
                         } label: {
                             Text("Cancelar")
                                 .font(.system(.body, design: .rounded).weight(.medium))
                         }
-                        
                     }
                 }
             }

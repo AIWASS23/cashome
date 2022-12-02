@@ -10,6 +10,8 @@ import SwiftUI
 
 class HomeScreen: UIView {
 
+    var actions: Actions?
+
     let titleExpense: UILabel = {
         let label = UILabel()
         label.text = "Despesas"
@@ -35,11 +37,8 @@ class HomeScreen: UIView {
 
     }()
 
-    var onTapAddButton: (() -> Void)?
-
     @objc func didTap() {
-        guard let onTapAddButton = onTapAddButton else { return }
-        onTapAddButton()
+        actions?.onTapAddButton()
     }
 
     override init(frame: CGRect) {

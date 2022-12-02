@@ -15,13 +15,18 @@ class ViewController: UIViewController {
     override func loadView() {
         self.screen = HomeScreen()
         self.view = self.screen
-        screen?.onTapAddButton = {
-            let sheet = UIHostingController(rootView: Sheet())
-            self.present(sheet, animated: true)
-        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.actions = self
+    }
 }
+
+extension ViewController: Actions {
+    func onTapAddButton() {
+        let sheetExpense = UIHostingController(rootView: SheetExpense())
+        sheetExpense.sheetPresentationController?.prefersGrabberVisible = true
+        self.present(sheetExpense, animated: true)
+    }
 }
