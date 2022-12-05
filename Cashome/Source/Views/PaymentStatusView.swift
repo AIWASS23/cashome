@@ -17,7 +17,7 @@ class PaymentStatusView: UIView {
     let statusLabel: UILabel = {
         let label = UILabel()
         label.text = "Pendente"
-        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -80,10 +80,8 @@ class PaymentStatusView: UIView {
         let containerConstraints = [
             containerStackView.topAnchor.constraint(equalTo: self.topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor,
-                                                        constant: 2),
-            containerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
-                                                         constant: -2)
+            containerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ]
         NSLayoutConstraint.activate(containerConstraints)
     }
