@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         screen?.expensesTableView.delegate = self
         screen?.expensesTableView.dataSource = self
+        screen?.actions = self
+    }
+}
+
+extension ViewController: Actions {
+    func onTapAddButton() {
+        let sheetExpense = UIHostingController(rootView: SheetExpense())
+        sheetExpense.sheetPresentationController?.prefersGrabberVisible = true
+        self.present(sheetExpense, animated: true)
     }
 }
 

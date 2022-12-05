@@ -19,6 +19,8 @@
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
 		FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */; };
+		EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */; };
+		EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */; };
 		FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */; };
 		FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD4322937931D00ABD308 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
 		FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
+		EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExpense.swift; sourceTree = "<group>"; };
+		EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusView.swift; sourceTree = "<group>"; };
 		FFDBD4322937931D00ABD308 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Cashome/Source/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -184,6 +188,7 @@
 		FFDBD42429362C9A00ABD308 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				FFDBD4322937931D00ABD308 /* ProfileView.swift */,
 				FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */,
 				FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */,
+				EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */,
 				1482A7562930E2CD00ED283D /* Cashome.xcdatamodeld in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
 				14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */,
 				FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */,
 				14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */,
+				EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */,
 				1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */,
 				FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
@@ -558,13 +566,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = JYTUW4QXB6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,13 +594,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NTS86MKTBV;
+				DEVELOPMENT_TEAM = JYTUW4QXB6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
