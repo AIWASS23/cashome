@@ -18,6 +18,7 @@
 		1482A7722930E2CE00ED283D /* CashomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
+		ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6E3084293E2554003ED798 /* ModalExpense.swift */; };
 		EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */; };
 		EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */; };
 		FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */; };
@@ -57,6 +58,7 @@
 		1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
+		ED6E3084293E2554003ED798 /* ModalExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalExpense.swift; path = Cashome/Source/Protocols/ModalExpense.swift; sourceTree = SOURCE_ROOT; };
 		EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExpense.swift; sourceTree = "<group>"; };
 		EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		FFDBD42329362C8E00ABD308 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED6E3084293E2554003ED798 /* ModalExpense.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */,
 				EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */,
 				1482A7562930E2CD00ED283D /* Cashome.xcdatamodeld in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
