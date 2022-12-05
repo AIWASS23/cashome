@@ -44,8 +44,6 @@ class HomeScreen: UIView {
         return label
     }()
 
-    let addButtonExpense: UIButton = {
-
     lazy var addButtonExpense: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
@@ -97,7 +95,7 @@ class HomeScreen: UIView {
 
             cadsStackView.topAnchor.constraint(equalTo: self.topAnchor ,constant: 200),
             cadsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
-            cadsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17)
+            cadsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
 
 //            expenseCard.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -17),
 //            expenseCard.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0)
