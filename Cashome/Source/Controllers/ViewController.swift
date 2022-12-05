@@ -32,6 +32,8 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpensesTableViewCell.identifier, for: indexPath) as? ExpensesTableViewCell else {
             return UITableViewCell()
         }
+        cell.configure(numberOfMembers: 3, expenseTitle: "Contasss",
+                       value: "100,10", status: .paid, deadLineDate: "05/12")
         return cell
     }
 

@@ -24,7 +24,7 @@ class HomeScreen: UIView {
     let addButtonExpense: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
-        let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .bold, scale: .medium)
+        let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .medium, scale: .medium)
         config.baseForegroundColor = UIColor(named: "ActionColor")
         config.image = UIImage(systemName: "plus", withConfiguration: size)
         button.configuration = config
@@ -37,7 +37,6 @@ class HomeScreen: UIView {
     var expensesTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.backgroundColor = .clear
-        // registra célula
         tableView.register(ExpensesTableViewCell.self,
                            forCellReuseIdentifier: ExpensesTableViewCell.identifier)
         tableView.layer.cornerRadius = 8
@@ -51,13 +50,11 @@ class HomeScreen: UIView {
         self.addSubview(addButtonExpense)
         self.addSubview(expensesTableView)
         setupConstraints()
-
     }
 
     override func didMoveToWindow() {
         super.didMoveToWindow()
         linearGradientColorBackground()
-
     }
 
     required init?(coder: NSCoder) {
