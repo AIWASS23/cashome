@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeScreen: UIView {
+
+    var actions: Actions?
 
     let titleExpense: UILabel = {
         let label = UILabel()
@@ -21,7 +24,7 @@ class HomeScreen: UIView {
         return label
     }()
 
-    let addButtonExpense: UIButton = {
+    lazy var addButtonExpense: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
         let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .bold, scale: .medium)
@@ -29,10 +32,14 @@ class HomeScreen: UIView {
         config.image = UIImage(systemName: "plus.circle.fill", withConfiguration: size)
         button.configuration = config
         button.translatesAutoresizingMaskIntoConstraints = false
-
+        button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         return button
 
     }()
+
+    @objc func didTap() {
+        actions?.onTapAddButton()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
