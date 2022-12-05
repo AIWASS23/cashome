@@ -46,7 +46,6 @@ class HomeScreen: UIView {
         self.addSubview(titleExpense)
         self.addSubview(addButtonExpense)
         setupConstraints()
-
     }
 
     override func didMoveToWindow() {
