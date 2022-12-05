@@ -70,7 +70,6 @@ class HomeScreen: UIView {
         self.cadsStackView.addArrangedSubview(gainCard)
         self.cadsStackView.addArrangedSubview(expenseCard)
         setupConstraints()
-
     }
 
     override func didMoveToWindow() {
