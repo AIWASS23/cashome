@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Budget" representedClassName="Budget" syncable="YES" codeGenerationType="class">
+        <attribute name="available_value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="member_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Members"/>
+    </entity>
+    <entity name="Contributors" representedClassName="Contributors" syncable="YES" codeGenerationType="class">
+        <relationship name="expense_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense"/>
+        <relationship name="member_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Members"/>
+    </entity>
+    <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
+        <attribute name="deadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="descriptionExpense" optional="YES" attributeType="String"/>
+        <attribute name="paymentDay" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="statusPay" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="responsible" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Members"/>
+    </entity>
+    <entity name="Members" representedClassName="Members" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
 </model>
