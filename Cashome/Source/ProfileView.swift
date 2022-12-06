@@ -14,7 +14,7 @@ enum ProfilesTypes {
 }
 
 enum ProfileSizes: CGFloat {
-    case small = 30
+    case small = 25
     case medium = 50
     case bigger = 60
 }
@@ -23,8 +23,7 @@ class ProfileView: UIView {
 
     let firstLettersText: UILabel = {
         let label = UILabel()
-        label.text = "Default"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -50,7 +49,7 @@ class ProfileView: UIView {
 
         if type == .defaultProfile {
             self.firstLettersText.textColor = UIColor(named: "BackgroundDark")
-            self.backgroundColor = .white
+            self.backgroundColor = .clear
             self.layer.borderColor = UIColor(named: "BackgroundDark")?.cgColor
             self.layer.borderWidth = 1
         } else if type == .individualProfile {

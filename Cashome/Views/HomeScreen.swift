@@ -47,13 +47,23 @@ class HomeScreen: UIView {
     lazy var addButtonExpense: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
-        let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .bold, scale: .medium)
+        let size = UIImage.SymbolConfiguration(pointSize: 28, weight: .medium, scale: .medium)
         config.baseForegroundColor = UIColor(named: "ActionColor")
-        config.image = UIImage(systemName: "plus.circle.fill", withConfiguration: size)
+        config.image = UIImage(systemName: "plus", withConfiguration: size)
         button.configuration = config
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         return button
+    }()
+
+    var expensesTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = .clear
+        tableView.register(ExpensesTableViewCell.self,
+                           forCellReuseIdentifier: ExpensesTableViewCell.identifier)
+        tableView.layer.cornerRadius = 8
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
 
     @objc func didTap() {
@@ -64,6 +74,7 @@ class HomeScreen: UIView {
         super.init(frame: frame)
         self.addSubview(titleExpense)
         self.addSubview(addButtonExpense)
+        self.addSubview(expensesTableView)
         self.addSubview(cadsStackView)
         self.cadsStackView.addArrangedSubview(gainCard)
         self.cadsStackView.addArrangedSubview(expenseCard)
@@ -73,7 +84,6 @@ class HomeScreen: UIView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         linearGradientColorBackground()
-
     }
 
     required init?(coder: NSCoder) {
@@ -103,7 +113,15 @@ class HomeScreen: UIView {
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             addButtonExpense.centerYAnchor.constraint(equalTo: titleExpense.centerYAnchor),
             addButtonExpense.widthAnchor.constraint(equalToConstant: 35),
-            addButtonExpense.heightAnchor.constraint(equalToConstant: 35)
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 35),
+
+            expensesTableView.topAnchor.constraint(equalTo: titleExpense.bottomAnchor, constant: 10),
+            expensesTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,
+                                                      constant: -10),
+            expensesTableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                                                       constant: 20),
+            expensesTableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+                                                        constant: -20)
         ])
     }
 }

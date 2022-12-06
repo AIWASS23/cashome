@@ -19,6 +19,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.expensesTableView.delegate = self
+        screen?.expensesTableView.dataSource = self
         screen?.actions = self
     }
 }
@@ -29,4 +31,27 @@ extension ViewController: Actions {
         sheetExpense.sheetPresentationController?.prefersGrabberVisible = true
         self.present(sheetExpense, animated: true)
     }
+}
+
+// MARK: Protocólo responsável por determinar as células e seus dados
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpensesTableViewCell.identifier, for: indexPath) as? ExpensesTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(numberOfMembers: 3, expenseTitle: "Contasss",
+                       value: "100,10", status: .paid, deadLineDate: "05/12")
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+
 }

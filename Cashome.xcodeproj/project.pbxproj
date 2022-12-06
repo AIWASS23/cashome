@@ -21,6 +21,7 @@
 		1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492282B2938E2C5008E1E67 /* Utilits.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
+		FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */; };
 		ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6E3084293E2554003ED798 /* ModalExpense.swift */; };
 		EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */; };
 		EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */; };
@@ -64,6 +65,7 @@
 		1492282B2938E2C5008E1E67 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
+		FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		ED6E3084293E2554003ED798 /* ModalExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalExpense.swift; path = Cashome/Source/Protocols/ModalExpense.swift; sourceTree = SOURCE_ROOT; };
 		EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExpense.swift; sourceTree = "<group>"; };
 		EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				14ECB4ED29364B4800034B56 /* HomeScreen.swift */,
 				FFDBD4322937931D00ABD308 /* ProfileView.swift */,
 				FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */,
+				FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */,
 				EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */,
 				14590489293E2DA900202BAE /* CardView.swift */,
 			);
@@ -410,6 +413,7 @@
 				FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */,
 				1459048A293E2DA900202BAE /* CardView.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
+				FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
