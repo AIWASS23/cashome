@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14590488293E2D2C00202BAE /* Enumerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14590487293E2D2C00202BAE /* Enumerators.swift */; };
+		1459048A293E2DA900202BAE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14590489293E2DA900202BAE /* CardView.swift */; };
 		1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A74B2930E2CD00ED283D /* AppDelegate.swift */; };
 		1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A74D2930E2CD00ED283D /* SceneDelegate.swift */; };
 		1482A7502930E2CD00ED283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A74F2930E2CD00ED283D /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 		1482A7662930E2CE00ED283D /* CashomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7652930E2CE00ED283D /* CashomeTests.swift */; };
 		1482A7702930E2CE00ED283D /* CashomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A76F2930E2CE00ED283D /* CashomeUITests.swift */; };
 		1482A7722930E2CE00ED283D /* CashomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */; };
+		1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492282B2938E2C5008E1E67 /* Utilits.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
 		ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6E3084293E2554003ED798 /* ModalExpense.swift */; };
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14590487293E2D2C00202BAE /* Enumerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Enumerators.swift; path = Cashome/Source/Views/Enumerators.swift; sourceTree = SOURCE_ROOT; };
+		14590489293E2DA900202BAE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1482A7482930E2CD00ED283D /* Cashome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482A74B2930E2CD00ED283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1482A74D2930E2CD00ED283D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		1482A76B2930E2CE00ED283D /* CashomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482A76F2930E2CE00ED283D /* CashomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITests.swift; sourceTree = "<group>"; };
 		1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1492282B2938E2C5008E1E67 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
 		ED6E3084293E2554003ED798 /* ModalExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalExpense.swift; path = Cashome/Source/Protocols/ModalExpense.swift; sourceTree = SOURCE_ROOT; };
@@ -215,6 +221,7 @@
 				FFDBD4322937931D00ABD308 /* ProfileView.swift */,
 				FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */,
 				EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */,
+				14590489293E2DA900202BAE /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				14ECB4EF29364BAC00034B56 /* GradientColor.swift */,
+				1492282B2938E2C5008E1E67 /* Utilits.swift */,
+				14590487293E2D2C00202BAE /* Enumerators.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,13 +399,16 @@
 				ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */,
 				EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */,
 				1482A7562930E2CD00ED283D /* Cashome.xcdatamodeld in Sources */,
+				14590488293E2D2C00202BAE /* Enumerators.swift in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
+				1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */,
 				14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */,
 				FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */,
 				14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */,
 				EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */,
 				1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */,
 				FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */,
+				1459048A293E2DA900202BAE /* CardView.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
