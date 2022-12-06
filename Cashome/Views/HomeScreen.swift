@@ -96,7 +96,6 @@ class HomeScreen: UIView {
             titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
             titleExpense.widthAnchor.constraint(equalToConstant: 150),
-            titleExpense.heightAnchor.constraint(equalToConstant: 150),
 
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
             addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
@@ -106,9 +105,6 @@ class HomeScreen: UIView {
             cadsStackView.topAnchor.constraint(equalTo: self.topAnchor ,constant: 200),
             cadsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
             cadsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
-
-//            expenseCard.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -17),
-//            expenseCard.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0)
 
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             addButtonExpense.centerYAnchor.constraint(equalTo: titleExpense.centerYAnchor),
