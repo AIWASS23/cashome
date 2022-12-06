@@ -11,15 +11,35 @@ import SwiftUI
 class HomeScreen: UIView {
 
     var actions: Actions?
+    let gainCard: CardView = {
+        let view = CardView()
+        view.configure(color: .positive, icon: .gain, title: .balance)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    let expenseCard: CardView = {
+        let view = CardView()
+        view.configure(color: .negative, icon: .pain, title: .expense)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    let cadsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalCentering
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
 
     let titleExpense: UILabel = {
+
         let label = UILabel()
         label.text = "Despesas"
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
-
-        /* fazer uma extension func para reaproveitamento de Codigo */
 
         return label
     }()
@@ -34,7 +54,6 @@ class HomeScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         return button
-
     }()
 
     var expensesTableView: UITableView = {
@@ -56,6 +75,9 @@ class HomeScreen: UIView {
         self.addSubview(titleExpense)
         self.addSubview(addButtonExpense)
         self.addSubview(expensesTableView)
+        self.addSubview(cadsStackView)
+        self.cadsStackView.addArrangedSubview(gainCard)
+        self.cadsStackView.addArrangedSubview(expenseCard)
         setupConstraints()
     }
 
@@ -70,9 +92,23 @@ class HomeScreen: UIView {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+
+            titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
-            titleExpense.heightAnchor.constraint(equalToConstant: 35),
+            titleExpense.widthAnchor.constraint(equalToConstant: 150),
+            titleExpense.heightAnchor.constraint(equalToConstant: 150),
+
+            addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
+            addButtonExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
+            addButtonExpense.widthAnchor.constraint(equalToConstant: 30),
+            addButtonExpense.heightAnchor.constraint(equalToConstant: 30),
+
+            cadsStackView.topAnchor.constraint(equalTo: self.topAnchor ,constant: 200),
+            cadsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
+            cadsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
+
+//            expenseCard.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -17),
+//            expenseCard.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0)
 
             addButtonExpense.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             addButtonExpense.centerYAnchor.constraint(equalTo: titleExpense.centerYAnchor),
