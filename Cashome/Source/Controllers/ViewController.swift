@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     override func loadView() {
         self.viewModel = HomeViewModel()
         self.screen = HomeScreen()
+        navigationItem.rightBarButtonItem =
+        UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(showMembers))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "ActionColor")
         self.view = self.screen
     }
 
@@ -24,6 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         monthTitle.delegate = self
         configTitle()
+        navigationItem.backBarButtonItem =
+        UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         screen?.expensesTableView.delegate = self
         screen?.expensesTableView.dataSource = self
         screen?.actions = self
@@ -43,6 +48,11 @@ class ViewController: UIViewController {
         self.datePickerSheet = SheetDateView(view: self.view)
         self.datePickerSheet!.delegate = self
         self.present(self.datePickerSheet!.alertSheet, animated: true)
+    }
+
+    @objc func showMembers() {
+        var membersController = MembersViewController()
+        self.navigationController?.pushViewController(membersController, animated: true)
     }
 }
 
