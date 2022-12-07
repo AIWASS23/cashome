@@ -7,19 +7,20 @@ class ViewController: UIViewController {
     var viewModel: HomeViewModel?
 
     override func loadView() {
+        self.viewModel = HomeViewModel()
         self.screen = HomeScreen()
         self.view = self.screen
-        self.viewModel = HomeViewModel()
     }
 
-    lazy var monthTitle: SelectDateView = {
-        let view = SelectDateView()
+    lazy var monthTitle: TitleDateView = {
+        let view = TitleDateView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        monthTitle.delegate = self
         configTitle()
         screen?.expensesTableView.delegate = self
         screen?.expensesTableView.dataSource = self
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     }
 
     func configTitle() {
+        monthTitle.update()
         monthTitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         monthTitle.heightAnchor.constraint(equalToConstant: 44).isActive = true
         self.navigationItem.titleView = monthTitle
@@ -50,6 +52,16 @@ extension ViewController: Actions {
     }
 }
 
+// MARK: Protocólo responsável por atualizar dados do Title Date
+extension ViewController: TitleDateDelegate {
+    func updateTitle() -> String {
+        let date = viewModel?.getCurrentDate()
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MMMM yyyy"
+        return dateFormat.string(from: date!).capitalizeFirstLetter()
+    }
+}
+
 // MARK: Protocólo responsável por determinar as células e seus dados
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +72,14 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpensesTableViewCell.identifier, for: indexPath) as? ExpensesTableViewCell
         else {
             return UITableViewCell()
+        }
+        if indexPath.row == 0 {
+            cell.layer.cornerRadius = 8
+            cell.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            cell.layer.cornerRadius = 8
+            cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         }
         cell.configure(numberOfMembers: 3, expenseTitle: "Contasss",
                        value: "100,10", status: .paid, deadLineDate: "05/12")

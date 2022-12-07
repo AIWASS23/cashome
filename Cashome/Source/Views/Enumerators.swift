@@ -38,4 +38,3 @@ enum ProfileSizes: CGFloat {
     case medium = 50
     case bigger = 60
 }
-

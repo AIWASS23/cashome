@@ -1,6 +1,8 @@
 import UIKit
 
-class SelectDateView: UIView {
+class TitleDateView: UIView {
+
+    var delegate: TitleDateDelegate?
 
     var iconSelectDate: UIImageView = {
         let iconConfiguration = UIImage.SymbolConfiguration(weight: .bold)
@@ -14,7 +16,7 @@ class SelectDateView: UIView {
 
     var monthText: UILabel = {
         let textView = UILabel()
-        textView.text = "Novembro"
+        textView.text = ""
         textView.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         textView.textColor = UIColor.black
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +39,10 @@ class SelectDateView: UIView {
         self.addSubview(monthSelectedStack)
         self.isUserInteractionEnabled = true
         setConstraints()
+    }
+
+    public func update() {
+        monthText.text = delegate?.updateTitle()
     }
 
     required init(coder: NSCoder) {

@@ -8,5 +8,13 @@
 import Foundation
 
 class HomeViewModel {
-    
+    let date: Date
+
+    init() {
+        self.date = Date()
+    }
+
+    public func getCurrentDate() -> Date {
+        return self.date
+    }
 }
