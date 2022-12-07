@@ -30,7 +30,7 @@
 		FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */; };
 		FF18360B2940B6FC00EF7EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18360A2940B6FC00EF7EBA /* HomeViewModel.swift */; };
 		FF18360E2940C96B00EF7EBA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18360D2940C96B00EF7EBA /* StringExtension.swift */; };
-		FF1836102940CA0B00EF7EBA /* TitleDateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18360F2940CA0B00EF7EBA /* TitleDateDelegate.swift */; };
+		FF1836102940CA0B00EF7EBA /* DateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18360F2940CA0B00EF7EBA /* DateDelegate.swift */; };
 		FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */; };
 		FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD4322937931D00ABD308 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -80,7 +80,7 @@
 		FF18360A2940B6FC00EF7EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FF18360C2940C8FC00EF7EBA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FF18360D2940C96B00EF7EBA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		FF18360F2940CA0B00EF7EBA /* TitleDateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDateDelegate.swift; sourceTree = "<group>"; };
+		FF18360F2940CA0B00EF7EBA /* DateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDelegate.swift; sourceTree = "<group>"; };
 		FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusView.swift; sourceTree = "<group>"; };
 		FFDBD4322937931D00ABD308 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Cashome/Source/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -211,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */,
-				FF18360F2940CA0B00EF7EBA /* TitleDateDelegate.swift */,
+				FF18360F2940CA0B00EF7EBA /* DateDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 				B21C5706293788EC00D18C62 /* TitleDateView.swift in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
 				1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */,
-				FF1836102940CA0B00EF7EBA /* TitleDateDelegate.swift in Sources */,
+				FF1836102940CA0B00EF7EBA /* DateDelegate.swift in Sources */,
 				14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */,
 				FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */,
 				14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */,

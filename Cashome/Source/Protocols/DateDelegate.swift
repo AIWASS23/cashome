@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol TitleDateDelegate {
+protocol TitleDateDelegate: AnyObject {
     func updateTitle() -> String
+}
+
+protocol SheetDateDelegate: AnyObject {
+    func getSelectedDate()
 }

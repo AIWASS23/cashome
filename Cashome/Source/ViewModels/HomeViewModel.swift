@@ -8,7 +8,7 @@
 import Foundation
 
 class HomeViewModel {
-    let date: Date
+    var date: Date
 
     init() {
         self.date = Date()

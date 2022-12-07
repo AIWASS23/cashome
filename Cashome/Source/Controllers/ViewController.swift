@@ -1,10 +1,12 @@
 import UIKit
 import SwiftUI
+import MonthYearPicker
 
 class ViewController: UIViewController {
 
     var screen: HomeScreen?
     var viewModel: HomeViewModel?
+    var datePickerSheet: SheetDateView?
 
     override func loadView() {
         self.viewModel = HomeViewModel()
@@ -38,8 +40,19 @@ class ViewController: UIViewController {
     }
 
     @objc func presentDateAlertSheet(_ sender: UITapGestureRecognizer) {
-        let datePickerSheet = SheetDateView(view: self.view)
-        self.present(datePickerSheet.alertSheet, animated: true)
+        self.datePickerSheet = SheetDateView(view: self.view)
+        self.datePickerSheet!.delegate = self
+        self.present(self.datePickerSheet!.alertSheet, animated: true)
+    }
+}
+
+// MARK: Protocólo responsável por capturar a data selecionada na sheet
+extension ViewController: SheetDateDelegate {
+    func getSelectedDate() {
+        if let date = datePickerSheet?.picker.date {
+            viewModel?.date = date
+            monthTitle.update()
+        }
     }
 }
 
