@@ -11,7 +11,7 @@ struct SheetExpense: View {
 
     @Environment(\.dismiss) var dismiss
     @State private var value = ""
-    @State private var description = ""
+    @State internal var description = ""
     @State private var deadline = Date()
     @State private var paymentDay = Date()
     @State private var statusPay : Bool = false
@@ -65,6 +65,16 @@ struct SheetExpense: View {
                             .pickerStyle(MenuPickerStyle()
                         )
                     }
+                    Section {
+                        Toggle("Christian", isOn: $statusPay)
+                            .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                        Toggle("Raona", isOn: $statusPay)
+                            .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                        Toggle("Marcelo", isOn: $statusPay)
+                            .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                    } header: {
+                        Text("Contribuintes")
+                    }
                 }
             }
             .toolbar {
@@ -92,5 +102,6 @@ struct SheetExpense: View {
             .navigationTitle("Adicionar Despesa")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationViewStyle(.stack)
     }
 }
