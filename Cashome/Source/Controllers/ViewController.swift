@@ -1,16 +1,18 @@
 import UIKit
 import SwiftUI
-import MonthYearPicker
 
 class ViewController: UIViewController {
+
     var screen: HomeScreen?
+    var viewModel: HomeViewModel?
 
     override func loadView() {
         self.screen = HomeScreen()
         self.view = self.screen
+        self.viewModel = HomeViewModel()
     }
 
-    lazy var titleMonth: SelectDateView = {
+    lazy var monthTitle: SelectDateView = {
         let view = SelectDateView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -25,37 +27,21 @@ class ViewController: UIViewController {
     }
 
     func configTitle() {
-        titleMonth.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        titleMonth.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        self.navigationItem.titleView = titleMonth
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(random))
-        titleMonth.isUserInteractionEnabled = true
-        titleMonth.addGestureRecognizer(gesture)
+        monthTitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        monthTitle.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        self.navigationItem.titleView = monthTitle
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(presentDateAlertSheet))
+        monthTitle.isUserInteractionEnabled = true
+        monthTitle.addGestureRecognizer(gesture)
     }
 
-    @objc func random2() {
-        print("ihuu")
-    }
-
-    @objc func random(_ sender: UITapGestureRecognizer) {
-
-        let dateChooserAlert = UIAlertController(title: "Choose date...",
-                                                 message: nil,
-                                                 preferredStyle: .actionSheet)
-
-        let picker = MonthYearPickerView(frame: CGRect(origin: CGPoint(x: 0,y: 1),
-                                                       size: CGSize(width: view.bounds.width, height: 216)))
-        picker.addTarget(self, action: #selector(random2), for: .valueChanged)
-
-        dateChooserAlert.view.addSubview(picker)
-        dateChooserAlert.addAction(UIAlertAction(title: "Concluir", style: .cancel, handler: { _ in
-        }))
-        let height: NSLayoutConstraint = NSLayoutConstraint(item: dateChooserAlert.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.1, constant: 300)
-        dateChooserAlert.view.addConstraint(height)
-        self.present(dateChooserAlert, animated: true)
+    @objc func presentDateAlertSheet(_ sender: UITapGestureRecognizer) {
+        let datePickerSheet = SheetDateView(view: self.view)
+        self.present(datePickerSheet.alertSheet, animated: true)
     }
 }
 
+// MARK: Protocólo responsável por determinar a ação do botão de adicionar despesa
 extension ViewController: Actions {
     func onTapAddButton() {
         let sheetExpense = UIHostingController(rootView: SheetExpense())
@@ -69,8 +55,10 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpensesTableViewCell.identifier, for: indexPath) as? ExpensesTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpensesTableViewCell.identifier, for: indexPath) as? ExpensesTableViewCell
+        else {
             return UITableViewCell()
         }
         cell.configure(numberOfMembers: 3, expenseTitle: "Contasss",

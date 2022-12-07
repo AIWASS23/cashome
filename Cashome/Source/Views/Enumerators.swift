@@ -21,3 +21,21 @@ enum BalanceAndExpense: String {
     case balance = "Valor Mensal"
     case expense = "Gastos Totais"
 }
+
+enum PaymentStatus: String {
+    case paid = "checkmark"
+    case pending = "xmark"
+}
+
+enum ProfilesTypes {
+    case responsableProfile
+    case defaultProfile
+    case individualProfile
+}
+
+enum ProfileSizes: CGFloat {
+    case small = 25
+    case medium = 50
+    case bigger = 60
+}
+
