@@ -21,10 +21,14 @@
 		1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492282B2938E2C5008E1E67 /* Utilits.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
-		FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */; };
+		ED5705F02940B64F00B68347 /* GetFirstChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5705EF2940B64F00B68347 /* GetFirstChar.swift */; };
 		ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6E3084293E2554003ED798 /* ModalExpense.swift */; };
+		EDCED115293F76080056A0F9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCED114293F76080056A0F9 /* MembersViewController.swift */; };
+		EDCED117293F773E0056A0F9 /* MembersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCED116293F773E0056A0F9 /* MembersScreen.swift */; };
+		EDCED119293F797A0056A0F9 /* SheetMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCED118293F797A0056A0F9 /* SheetMembers.swift */; };
 		EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */; };
 		EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */; };
+		FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */; };
 		FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */; };
 		FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBD4322937931D00ABD308 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -65,10 +69,14 @@
 		1492282B2938E2C5008E1E67 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
-		FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
+		ED5705EF2940B64F00B68347 /* GetFirstChar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetFirstChar.swift; path = Cashome/Source/Views/GetFirstChar.swift; sourceTree = SOURCE_ROOT; };
 		ED6E3084293E2554003ED798 /* ModalExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalExpense.swift; path = Cashome/Source/Protocols/ModalExpense.swift; sourceTree = SOURCE_ROOT; };
+		EDCED114293F76080056A0F9 /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		EDCED116293F773E0056A0F9 /* MembersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersScreen.swift; sourceTree = "<group>"; };
+		EDCED118293F797A0056A0F9 /* SheetMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMembers.swift; sourceTree = "<group>"; };
 		EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExpense.swift; sourceTree = "<group>"; };
 		EDFF9F2D293A3B2F001AE5AC /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		FFDBD42B2936541000ABD308 /* PaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusView.swift; sourceTree = "<group>"; };
 		FFDBD4322937931D00ABD308 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Cashome/Source/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -182,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				1482A74F2930E2CD00ED283D /* ViewController.swift */,
+				EDCED114293F76080056A0F9 /* MembersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +234,8 @@
 				FF1835DC2938EBAE00EF7EBA /* ExpensesTableViewCell.swift */,
 				EDFF9F2B2938E059001AE5AC /* SheetExpense.swift */,
 				14590489293E2DA900202BAE /* CardView.swift */,
+				EDCED116293F773E0056A0F9 /* MembersScreen.swift */,
+				EDCED118293F797A0056A0F9 /* SheetMembers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 				14ECB4EF29364BAC00034B56 /* GradientColor.swift */,
 				1492282B2938E2C5008E1E67 /* Utilits.swift */,
 				14590487293E2D2C00202BAE /* Enumerators.swift */,
+				ED5705EF2940B64F00B68347 /* GetFirstChar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCED115293F76080056A0F9 /* MembersViewController.swift in Sources */,
 				ED6E3085293E2554003ED798 /* ModalExpense.swift in Sources */,
 				EDFF9F2E293A3B2F001AE5AC /* ActionsView.swift in Sources */,
 				1482A7562930E2CD00ED283D /* Cashome.xcdatamodeld in Sources */,
@@ -409,11 +422,14 @@
 				FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */,
 				14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */,
 				EDFF9F2C2938E059001AE5AC /* SheetExpense.swift in Sources */,
+				ED5705F02940B64F00B68347 /* GetFirstChar.swift in Sources */,
 				1482A74C2930E2CD00ED283D /* AppDelegate.swift in Sources */,
 				FFDBD4332937931D00ABD308 /* ProfileView.swift in Sources */,
+				EDCED117293F773E0056A0F9 /* MembersScreen.swift in Sources */,
 				1459048A293E2DA900202BAE /* CardView.swift in Sources */,
 				1482A74E2930E2CD00ED283D /* SceneDelegate.swift in Sources */,
 				FF1835DD2938EBAE00EF7EBA /* ExpensesTableViewCell.swift in Sources */,
+				EDCED119293F797A0056A0F9 /* SheetMembers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +605,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +633,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

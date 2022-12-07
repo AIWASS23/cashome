@@ -11,17 +11,24 @@ import SwiftUI
 class ViewController: UIViewController {
 
     var screen: HomeScreen?
-
     override func loadView() {
         self.screen = HomeScreen()
+        navigationItem.rightBarButtonItem =
+        UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(showMembers))
         self.view = self.screen
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem =
+        UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         screen?.expensesTableView.delegate = self
         screen?.expensesTableView.dataSource = self
         screen?.actions = self
+    }
+    @objc func showMembers() {
+        var membersController = MembersViewController()
+        self.navigationController?.pushViewController(membersController, animated: true)
     }
 }
 
