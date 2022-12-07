@@ -13,6 +13,6 @@ struct ModelExpense: Identifiable {
 }
 
 enum Flavor: String, CaseIterable, Identifiable {
-    case beatriz, chris
+    case beatriz, chris, marcelo, raina
     var id: Self {self}
 }
