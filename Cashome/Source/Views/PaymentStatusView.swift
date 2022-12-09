@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum PaymentStatus: String {
-    case paid = "checkmark"
-    case pending = "xmark"
-}
-
 class PaymentStatusView: UIView {
 
     let statusLabel: UILabel = {

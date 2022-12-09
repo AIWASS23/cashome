@@ -7,18 +7,6 @@
 
 import UIKit
 
-enum ProfilesTypes {
-    case responsableProfile
-    case defaultProfile
-    case individualProfile
-}
-
-enum ProfileSizes: CGFloat {
-    case small = 25
-    case medium = 50
-    case bigger = 60
-}
-
 class ProfileView: UIView {
 
     let firstLettersText: UILabel = {

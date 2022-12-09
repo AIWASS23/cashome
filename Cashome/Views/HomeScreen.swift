@@ -34,7 +34,6 @@ class HomeScreen: UIView {
     }()
 
     let titleExpense: UILabel = {
-
         let label = UILabel()
         label.text = "Despesas"
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
@@ -58,9 +57,10 @@ class HomeScreen: UIView {
 
     var expensesTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.backgroundColor = .clear
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(ExpensesTableViewCell.self,
                            forCellReuseIdentifier: ExpensesTableViewCell.identifier)
+        tableView.backgroundColor = .clear
         tableView.layer.cornerRadius = 8
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -85,14 +85,12 @@ class HomeScreen: UIView {
         super.didMoveToWindow()
         linearGradientColorBackground()
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-
             titleExpense.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
             titleExpense.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -75),
             titleExpense.widthAnchor.constraint(equalToConstant: 150),
@@ -112,8 +110,8 @@ class HomeScreen: UIView {
             addButtonExpense.heightAnchor.constraint(equalToConstant: 35),
 
             expensesTableView.topAnchor.constraint(equalTo: titleExpense.bottomAnchor, constant: 10),
-            expensesTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,
-                                                      constant: -10),
+            expensesTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor,
+                                                      constant: 0),
             expensesTableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
                                                        constant: 20),
             expensesTableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
