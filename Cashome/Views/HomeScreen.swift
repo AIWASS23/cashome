@@ -11,6 +11,7 @@ import SwiftUI
 class HomeScreen: UIView {
 
     var actions: Actions?
+
     let gainCard: CardView = {
         let view = CardView()
         view.configure(color: .positive, icon: .gain, title: .balance)
@@ -28,7 +29,8 @@ class HomeScreen: UIView {
     let cadsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .equalCentering
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -100,7 +102,7 @@ class HomeScreen: UIView {
             addButtonExpense.widthAnchor.constraint(equalToConstant: 30),
             addButtonExpense.heightAnchor.constraint(equalToConstant: 30),
 
-            cadsStackView.topAnchor.constraint(equalTo: self.topAnchor ,constant: 200),
+            cadsStackView.bottomAnchor.constraint(equalTo: self.titleExpense.topAnchor, constant: -20) ,
             cadsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -17),
             cadsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 17),
 

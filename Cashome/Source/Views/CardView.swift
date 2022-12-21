@@ -18,7 +18,8 @@ class CardView: UIView {
 
         let stack = UIStackView()
         stack.axis = .horizontal
-        stack.spacing = 2
+//        stack.distribution = .fillEqually
+        stack.alignment = .center
         stack.isLayoutMarginsRelativeArrangement = true
         stack.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -57,8 +58,8 @@ class CardView: UIView {
     private func setConstraints() {
             NSLayoutConstraint.activate([
 
-                stackBalance.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-                stackBalance.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+                stackBalance.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+                stackBalance.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
                 stackBalance.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
                 stackBalance.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
 

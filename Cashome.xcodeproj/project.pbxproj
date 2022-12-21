@@ -18,7 +18,7 @@
 		1482A7662930E2CE00ED283D /* CashomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7652930E2CE00ED283D /* CashomeTests.swift */; };
 		1482A7702930E2CE00ED283D /* CashomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A76F2930E2CE00ED283D /* CashomeUITests.swift */; };
 		1482A7722930E2CE00ED283D /* CashomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */; };
-		1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492282B2938E2C5008E1E67 /* Utilits.swift */; };
+		1492282C2938E2C5008E1E67 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492282B2938E2C5008E1E67 /* ViewExtension.swift */; };
 		14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4ED29364B4800034B56 /* HomeScreen.swift */; };
 		14ECB4F029364BAC00034B56 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB4EF29364BAC00034B56 /* GradientColor.swift */; };
 		B21C5706293788EC00D18C62 /* TitleDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21C5705293788EB00D18C62 /* TitleDateView.swift */; };
@@ -72,7 +72,7 @@
 		1482A76B2930E2CE00ED283D /* CashomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482A76F2930E2CE00ED283D /* CashomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITests.swift; sourceTree = "<group>"; };
 		1482A7712930E2CE00ED283D /* CashomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1492282B2938E2C5008E1E67 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = SOURCE_ROOT; };
+		1492282B2938E2C5008E1E67 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4ED29364B4800034B56 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreen.swift; path = Cashome/Views/HomeScreen.swift; sourceTree = SOURCE_ROOT; };
 		14ECB4EF29364BAC00034B56 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColor.swift; path = Cashome/Views/GradientColor.swift; sourceTree = SOURCE_ROOT; };
 		B21C5705293788EB00D18C62 /* TitleDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleDateView.swift; path = Cashome/Source/Controllers/TitleDateView.swift; sourceTree = SOURCE_ROOT; };
@@ -270,7 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				14ECB4EF29364BAC00034B56 /* GradientColor.swift */,
-				1492282B2938E2C5008E1E67 /* Utilits.swift */,
+				1492282B2938E2C5008E1E67 /* ViewExtension.swift */,
 				14590487293E2D2C00202BAE /* Enumerators.swift */,
 				FF18360D2940C96B00EF7EBA /* StringExtension.swift */,
 				ED5705EF2940B64F00B68347 /* GetFirstChar.swift */,
@@ -445,7 +445,7 @@
 				B21C570A2938EAA700D18C62 /* SheetDateView.swift in Sources */,
 				B21C5706293788EC00D18C62 /* TitleDateView.swift in Sources */,
 				1482A7502930E2CD00ED283D /* ViewController.swift in Sources */,
-				1492282C2938E2C5008E1E67 /* Utilits.swift in Sources */,
+				1492282C2938E2C5008E1E67 /* ViewExtension.swift in Sources */,
 				FF1836102940CA0B00EF7EBA /* DateDelegate.swift in Sources */,
 				14ECB4EE29364B4800034B56 /* HomeScreen.swift in Sources */,
 				FFDBD42C2936541000ABD308 /* PaymentStatusView.swift in Sources */,

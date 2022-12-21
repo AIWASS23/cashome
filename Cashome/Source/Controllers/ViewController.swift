@@ -12,7 +12,8 @@ class ViewController: UIViewController {
         self.viewModel = HomeViewModel()
         self.screen = HomeScreen()
         navigationItem.rightBarButtonItem =
-        UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(showMembers))
+        UIBarButtonItem(image: UIImage(systemName: "person.2.fill"),
+                        style: .plain, target: self, action: #selector(showMembers))
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "ActionColor")
         self.view = self.screen
     }

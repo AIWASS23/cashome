@@ -48,6 +48,7 @@ extension UIView {
 
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.alignment = .leading
         stackView.spacing = 1
         stackView.backgroundColor = .clear
         stackView.isLayoutMarginsRelativeArrangement = true
